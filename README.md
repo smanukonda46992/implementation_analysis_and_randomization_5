@@ -57,11 +57,15 @@ cd src && python analysis.py
 ```
 📦 quicksort-analysis
  ┣ 📂 src/
- ┃ ┣ 📄 quicksort.py       # Core sorting algorithms
+ ┃ ┣ 📄 quicksort.py       # Sorting algorithms
  ┃ ┣ 📄 generators.py      # Test data generators
- ┃ ┗ 📄 analysis.py        # Benchmarking & visualization
+ ┃ ┣ 📄 benchmark.py       # Timing utilities
+ ┃ ┣ 📄 complexity.py      # Curve fitting
+ ┃ ┣ 📄 visualization.py   # Plot generation
+ ┃ ┣ 📄 export.py          # CSV & reporting
+ ┃ ┗ 📄 analysis.py        # Main entry point
  ┣ 📂 docs/
- ┃ ┗ 📄 report.md          # Detailed analysis report
+ ┃ ┗ 📄 report.md          # Analysis report
  ┣ 📂 results/
  ┃ ┣ 🖼️ performance_comparison.png
  ┃ ┣ 🖼️ complexity_comparison.png
@@ -72,6 +76,18 @@ cd src && python analysis.py
  ┣ 📄 README.md
  ┗ 📄 requirements.txt
 ```
+
+### Module Overview
+
+| File | Purpose |
+|------|---------|
+| `quicksort.py` | Deterministic & randomized implementations |
+| `generators.py` | Random, sorted, reverse, nearly-sorted, duplicates |
+| `benchmark.py` | Time measurement with statistics |
+| `complexity.py` | O(n), O(n log n), O(n²) curve fitting |
+| `visualization.py` | All matplotlib plots |
+| `export.py` | CSV export & summary printing |
+| `analysis.py` | Main script - runs everything |
 
 ---
 
