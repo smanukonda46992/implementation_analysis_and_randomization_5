@@ -65,7 +65,10 @@ cd src && python analysis.py
  ┣ 📂 results/
  ┃ ┣ 🖼️ performance_comparison.png
  ┃ ┣ 🖼️ complexity_comparison.png
- ┃ ┗ 🖼️ speedup_analysis.png
+ ┃ ┣ 🖼️ speedup_analysis.png
+ ┃ ┣ 🖼️ growth_rate_analysis.png
+ ┃ ┣ 🖼️ speedup_heatmap.png
+ ┃ ┗ 📄 benchmark_results.csv
  ┣ 📄 README.md
  ┗ 📄 requirements.txt
 ```
@@ -145,6 +148,16 @@ def randomized_quicksort(arr, low, high):
   <img src="results/speedup_analysis.png" width="80%" alt="Speedup Analysis">
 </p>
 
+### Growth Rate Analysis
+<p align="center">
+  <img src="results/growth_rate_analysis.png" width="90%" alt="Growth Rate Analysis">
+</p>
+
+### Speedup Heatmap
+<p align="center">
+  <img src="results/speedup_heatmap.png" width="85%" alt="Speedup Heatmap">
+</p>
+
 ---
 
 ## 🔑 Key Findings
@@ -157,7 +170,13 @@ def randomized_quicksort(arr, low, high):
 | Nearly Sorted | 0.013s | 0.007s | 🟢 Randomized |
 | Duplicates | ~0.007s | ~0.009s | 🟡 Tie |
 
-> 📌 **Conclusion**: Randomized Quicksort is **155x faster** on sorted input (n=5000)
+### 📊 Statistical Insights
+
+- **Curve Fitting**: R² > 0.99 confirms theoretical complexity bounds
+- **Variance**: Randomized shows lower variance (more predictable)
+- **Scalability**: Randomized scales linearly with n log n
+
+> 📌 **Conclusion**: Randomized Quicksort is **150x+ faster** on sorted input (n=10000)
 
 ---
 
